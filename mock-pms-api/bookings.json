@@ -1,0 +1,39 @@
+[
+    {
+      "res_id": "R001",
+      "guest": {
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "email": "alice@example.com"
+      },
+      "room": {
+        "number": "101",
+        "type": "Deluxe"
+      },
+      "check_in": "2025-07-10T15:00:00",
+      "check_out": "2025-07-15T11:00:00",
+      "status": "confirmed",
+      "guest_count": 2,
+      "payment_status": "paid",
+      "notes": "Late check-in, vegan meals preferred"
+    },
+    {
+      "res_id": "R002",
+      "guest": {
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "email": "bob@example.com"
+      },
+      "room": {
+        "number": "102",
+        "type": "Suite"
+      },
+      "check_in": "2025-07-12T14:00:00",
+      "check_out": "2025-07-18T11:00:00",
+      "status": "checked_in",
+      "guest_count": 3,
+      "payment_status": "pending",
+      "notes": null
+    }
+  ]
+  
