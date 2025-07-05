@@ -1,1 +1,2 @@
-# Development specific requirements
+-r ./base.txt
+psycopg2-binary==2.9.7
