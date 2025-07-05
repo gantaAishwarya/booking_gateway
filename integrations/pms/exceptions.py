@@ -66,3 +66,15 @@ class PMSDataMappingError(PMSBaseException):
             {"error": self.message, "data": self.data},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
         )
+    
+class PMSDuplicateReservationError(PMSBaseException):
+    """Raised when a duplicate reservation_id is detected during creation."""
+
+    def __init__(self, message=None):
+        super().__init__(message or "Duplicate reservation detected.")
+
+    def to_response(self):
+        return Response(
+            {"error": self.message},
+            status=status.HTTP_409_CONFLICT,
+        )
