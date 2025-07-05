@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from bookings.serializers import BookingSerializer
+import logging
+from .models import Booking
 
-# Create your views here.
+logger = logging.getLogger(__name__)
+
+class BookingViewSet(viewsets.ModelViewSet):
+    """
+    General CRUD operations for bookings:
+    """
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
