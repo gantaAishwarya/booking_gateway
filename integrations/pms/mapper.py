@@ -2,13 +2,6 @@ from datetime import datetime
 from bookings.models import Booking
 from integrations.pms.exceptions import PMSDataMappingError
 
-
-def parse_date(date_str, field_name, data):
-    try:
-        return datetime.fromisoformat(date_str)
-    except Exception as e:
-        raise PMSDataMappingError(data=data, message=f"Invalid date in '{field_name}': {e}")
-
 def map_pms_booking(pms_data):
     try:
         required_fields = ["res_id", "guest", "room", "check_in", "check_out"]
