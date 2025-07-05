@@ -19,4 +19,4 @@ def map_pms_booking(pms_data):
             special_requests=pms_data.get("notes", ""),
         )
     except (KeyError, ValueError, TypeError) as e:
-        raise PMSDataMappingError(data=pms_data, message=str(e))
+        raise PMSDataMappingError(data=pms_data, message=f"Mapping error: {e}")
