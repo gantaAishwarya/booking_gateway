@@ -1,11 +1,10 @@
 import requests
 import logging
-from integrations.pms.exceptions import PMSAPIError,PMSConnectionError,PMSUnexpectedError
+from integrations.pms.exceptions import PMSAPIError, PMSConnectionError, PMSUnexpectedError
 
 logger = logging.getLogger(__name__)
 
-# TODO: Update BASE_URL
-BASE_URL = 'xxxxx'
+BASE_URL = "http://mock-server:8080"
 
 def fetch_pms_bookings():
     try:
